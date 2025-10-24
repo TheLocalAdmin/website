@@ -1,0 +1,279 @@
+/* Base Styles */
+:root {
+    --primary-color: #008080; /* Teal/Cyan-green */
+    --secondary-color: #333333; /* Dark background */
+    --text-color: #f0f0f0; /* Light gray text */
+    --card-bg: #444444; /* Slightly lighter card background */
+    --border-radius: 12px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header/Hero Section */
+header {
+    background-color: #222;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.header-content h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+.header-content h2 {
+    font-size: 1.2em;
+    font-weight: 300;
+    opacity: 0.8;
+    /* TWEAK: Added letter-spacing to look more stylized */
+    letter-spacing: 1px;
+}
+
+#profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 128, 128, 0.5); /* Glowing effect */
+}
+
+/* Main Content Layout */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Card Styling for Bio and Links */
+.bio-card, .links-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.bio-card p {
+    font-size: 1.1em;
+}
+
+/* TWEAK: Changed h4 to h3 to match your HTML's semantic structure */
+.bio-card h3 {
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    margin-top: 0; /* Ensure the first h3 has no top margin */
+}
+
+/* TWEAK: Added margin-top to separate it from the first bio */
+.bio-card h3 + h3 {
+    margin-top: 25px;
+}
+
+.origin-story {
+    /* TWEAK: Added margin-top, more padding, and italic style */
+    margin-top: 10px;
+    padding-left: 15px;
+    border-left: 3px solid var(--primary-color);
+    opacity: 0.8;
+    font-size: 0.95em;
+    font-style: italic;
+}
+
+.links-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Button/Link Styling */
+.btn {
+    display: block;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+    background-color: #00a0a0; /* Slightly lighter teal on hover */
+    transform: translateY(-2px);
+}
+
+/* Specific GitHub Button Style (used on index.html) */
+.github-btn {
+    background-color: #333; /* Darker, more github-like */
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.github-btn:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+/* NEW: Style for the email button */
+.email-btn {
+    background-color: #007bff; /* A clean, distinct blue */
+}
+
+.email-btn:hover {
+    background-color: #009cff;
+}
+
+/* New Resources Button Accent (used on index.html) */
+.resources-btn {
+    background-color: #f0c43c; /* A contrasting gold/yellow color */
+    color: #222;
+    text-shadow: none;
+}
+
+.resources-btn:hover {
+    background-color: #e0b43c;
+    transform: translateY(-2px);
+}
+
+/* Resource List Layout (used on resources.html) */
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.resource-item {
+    background-color: #555;
+    color: #fff;
+    padding: 12px;
+    font-size: 1em;
+    transition: background-color 0.2s;
+}
+
+.resource-item:hover {
+    background-color: #666;
+}
+
+.return-btn {
+    margin-top: 20px;
+    max-width: 50%;
+    align-self: center;
+}
+
+/* NEW: Styles for the card on the resources page */
+#resources-container {
+    text-align: center;
+}
+
+
+/* Discord Specific Styling */
+.discord-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #7289DA; /* Discord's brand color */
+    color: #fff;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* NEW: Added transition to match other buttons */
+    transition: background-color 0.3s, transform 0.1s;
+    text-decoration: none; /* Add this to ensure no underline */
+}
+
+/* NEW: Hover effect for Discord link */
+.discord-info:hover {
+    background-color: #8299e9; /* Lighter brand color */
+    transform: translateY(-2px);
+}
+
+.discord-logo {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    background-color: #fff; /* White background for the logo */
+    border-radius: 50%;
+    padding: 5px; /* Spacing inside the white circle */
+}
+
+.discord-handle {
+    font-weight: normal; /* Make the handle text less bold if desired */
+}
+
+/* NEW: YouTube Specific Styling */
+.youtube-info {
+    display: flex; /* Ensures logo and text are side-by-side */
+    align-items: center; /* Vertically centers logo and text */
+    justify-content: center; /* Horizontally centers the content */
+    gap: 10px;
+    background-color: #c4302b; /* YouTube Red */
+    color: #fff; /* Explicitly set text color to white */
+    padding: 15px;
+    border-radius: var(--border-radius);
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.1s;
+    text-decoration: none; 
+}
+
+.youtube-info:hover {
+    background-color: #e04a44; /* Lighter red on hover */
+    transform: translateY(-2px);
+}
+
+.youtube-logo {
+    width: 30px; /* Matches discord-logo image size */
+    height: 30px;
+    object-fit: contain; /* Prevents the logo from stretching */
+    background-color: #fff; 
+    border-radius: 50%;
+    padding: 5px; 
+}
+
+.youtube-handle {
+    font-weight: normal; /* Matches discord-handle */
+    color: #fff; /* Ensure the handle text is also white */
+}
+
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #222;
+    border-top: 1px solid #555;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .header-content h1 {
+        font-size: 2em;
+    }
+    .bio-card, .links-card {
+        padding: 20px;
+    }
+    .btn {
+        padding: 12px;
+    }
+    .return-btn {
+        max-width: 100%;
+    }
+}
