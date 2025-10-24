@@ -234,17 +234,15 @@ header {
 }
 
 .youtube-info:hover {
-    background-color: #e04a44; /* Lighter red on hover */
+    background-color: #e04444; /* Lighter red on hover */
     transform: translateY(-2px);
 }
 
 .youtube-logo {
-    width: 30px; /* Matches discord-logo image size */
-    height: 30px;
-    object-fit: contain; /* Prevents the logo from stretching */
-    background-color: #fff; 
-    border-radius: 50%;
-    padding: 5px; 
+    width: 40px;  /* Match the 40px total size of the Discord logo's circle */
+    height: 40px;
+    object-fit: contain; 
+    /* Removed background-color, border-radius, and padding */
 }
 
 .youtube-handle {
